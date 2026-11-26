@@ -6,11 +6,14 @@
  */ 
 
 
-#ifndef INCFILE1_H_
-#define INCFILE1_H_
+#ifndef USART_H_
+#define USART_H_
 
+#include <avr/interrupt.h>
+#include <avr/io.h>
 
+void USART_Init(unsigned int ubrr_value);
+void USART_Print(const char *str);
+int USART_Receive(void);
 
-
-
-#endif /* INCFILE1_H_ */
+#endif /* USART_H_ */
